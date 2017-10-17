@@ -1,0 +1,15 @@
+spring:
+  jpa:
+    show-sql: true    
+  http:
+    encoding:
+      charset: UTF-8
+   
+       
+logging:
+  level:  
+    root: INFO
+    com:
+      fr:
+        general:
+          FRLogger: INFO
