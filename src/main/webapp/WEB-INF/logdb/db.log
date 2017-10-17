@@ -1,0 +1,75 @@
+/*C13*/SET SCHEMA PUBLIC
+CONNECT USER SA
+DISCONNECT
+/*C14*/SET SCHEMA PUBLIC
+CONNECT USER SA
+DISCONNECT
+/*C15*/SET SCHEMA PUBLIC
+CONNECT USER SA
+/*C16*/SET SCHEMA PUBLIC
+CONNECT USER SA
+/*C17*/SET SCHEMA PUBLIC
+CONNECT USER SA
+/*C18*/SET SCHEMA PUBLIC
+CONNECT USER SA
+/*C19*/SET SCHEMA PUBLIC
+CONNECT USER SA
+/*C20*/SET SCHEMA PUBLIC
+CONNECT USER SA
+/*C21*/SET SCHEMA PUBLIC
+CONNECT USER SA
+/*C22*/SET SCHEMA PUBLIC
+CONNECT USER SA
+/*C23*/SET SCHEMA PUBLIC
+CONNECT USER SA
+/*C24*/SET SCHEMA PUBLIC
+CONNECT USER SA
+SET LOGSIZE 5
+SET AUTOCOMMIT FALSE
+/*C23*/SET AUTOCOMMIT FALSE
+ALTER TABLE fr_exerecord ADD sql LONGVARCHAR NULL
+ALTER TABLE fr_exerecord ADD browser VARCHAR(255) NULL
+ALTER TABLE fr_exerecord ADD memory NUMERIC NULL
+ALTER TABLE fr_exprecord ADD sql LONGVARCHAR NULL
+ALTER TABLE fr_exprecord ADD browser VARCHAR(255) NULL
+ALTER TABLE fr_exprecord ADD memory NUMERIC NULL
+SET AUTOCOMMIT TRUE
+/*C24*/SET AUTOCOMMIT TRUE
+INSERT INTO FR_ERRRECORD VALUES(26,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,6,'Error to load:com.fr.plugin.chart.map.server.service.MapEditorOpenEntryService',NULL,'2017-10-17 19:13:32.218000000')
+INSERT INTO FR_ERRRECORD VALUES(27,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,6,'Error to load:com.fr.plugin.chart.map.server.service.MapEditorEntryService',NULL,'2017-10-17 19:13:32.234000000')
+INSERT INTO FR_ERRRECORD VALUES(28,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,6,'Error to load:com.fr.plugin.chart.map.server.service.MapGetJsonService',NULL,'2017-10-17 19:13:32.236000000')
+INSERT INTO FR_ERRRECORD VALUES(29,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,6,'Error to load:com.fr.plugin.chart.phantom.PhantomConfigManager',NULL,'2017-10-17 19:13:32.242000000')
+INSERT INTO FR_ERRRECORD VALUES(30,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,6,'Error to load:com.fr.plugin.chart.map.server.MapLayerConfigManager',NULL,'2017-10-17 19:13:32.244000000')
+INSERT INTO FR_ERRRECORD VALUES(31,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,6,'class not found:com.fr.plugin.chart.funnel.FunnelIndependentVanChart',NULL,'2017-10-17 19:13:33.275000000')
+INSERT INTO FR_ERRRECORD VALUES(32,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,6,'class not found:com.fr.plugin.chart.heatmap.HeatMapIndependentVanChart',NULL,'2017-10-17 19:13:33.276000000')
+INSERT INTO FR_ERRRECORD VALUES(33,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,6,'class not found:com.fr.plugin.chart.wordcloud.WordCloudIndependentVanChart',NULL,'2017-10-17 19:13:33.278000000')
+INSERT INTO FR_ERRRECORD VALUES(34,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,6,'class not found:com.fr.plugin.chart.gantt.GanttIndependentVanChart',NULL,'2017-10-17 19:13:33.279000000')
+INSERT INTO FR_ERRRECORD VALUES(35,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,6,'class not found:com.fr.plugin.chart.structure.StructureIndependentVanChart',NULL,'2017-10-17 19:13:33.283000000')
+INSERT INTO FR_ERRRECORD VALUES(36,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,6,'Jar\u5305\u8fc7\u65e7,\u63d2\u4ef6\u5b89\u88c5\u5931\u8d25:\u56fe\u8868(\u65b0\u7279\u6027)',NULL,'2017-10-17 19:13:33.287000000')
+INSERT INTO FR_ERRRECORD VALUES(37,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,6,'Jar\u5305\u8fc7\u65e7,\u63d2\u4ef6\u5b89\u88c5\u5931\u8d25:\u62a5\u8868\u81ea\u9002\u5e94\u63d2\u4ef6',NULL,'2017-10-17 19:13:33.289000000')
+INSERT INTO FR_ERRRECORD VALUES(38,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,6,'Error to load:com.fr.plugin.chart.map.server.service.MapEditorOpenEntryService',NULL,'2017-10-17 19:13:33.537000000')
+INSERT INTO FR_ERRRECORD VALUES(39,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,6,'Error to load:com.fr.plugin.chart.map.server.service.MapEditorEntryService',NULL,'2017-10-17 19:13:33.542000000')
+INSERT INTO FR_ERRRECORD VALUES(40,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,6,'Error to load:com.fr.plugin.chart.map.server.service.MapGetJsonService',NULL,'2017-10-17 19:13:33.547000000')
+INSERT INTO FR_ERRRECORD VALUES(41,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,6,'Error to load:com.fr.plugin.chart.phantom.PhantomConfigManager',NULL,'2017-10-17 19:13:33.551000000')
+INSERT INTO FR_ERRRECORD VALUES(42,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,6,'Error to load:com.fr.plugin.chart.map.server.MapLayerConfigManager',NULL,'2017-10-17 19:13:33.553000000')
+INSERT INTO FR_ERRRECORD VALUES(43,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,6,'class not found:com.fr.plugin.chart.funnel.FunnelIndependentVanChart',NULL,'2017-10-17 19:13:33.555000000')
+INSERT INTO FR_ERRRECORD VALUES(44,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,6,'class not found:com.fr.plugin.chart.heatmap.HeatMapIndependentVanChart',NULL,'2017-10-17 19:13:33.557000000')
+INSERT INTO FR_ERRRECORD VALUES(45,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,6,'class not found:com.fr.plugin.chart.wordcloud.WordCloudIndependentVanChart',NULL,'2017-10-17 19:13:33.558000000')
+INSERT INTO FR_ERRRECORD VALUES(46,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,6,'class not found:com.fr.plugin.chart.gantt.GanttIndependentVanChart',NULL,'2017-10-17 19:13:33.559000000')
+INSERT INTO FR_ERRRECORD VALUES(47,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,6,'class not found:com.fr.plugin.chart.structure.StructureIndependentVanChart',NULL,'2017-10-17 19:13:33.560000000')
+INSERT INTO FR_ERRRECORD VALUES(48,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,6,'Jar\u5305\u8fc7\u65e7,\u63d2\u4ef6\u5b89\u88c5\u5931\u8d25:\u56fe\u8868(\u65b0\u7279\u6027)',NULL,'2017-10-17 19:13:33.563000000')
+INSERT INTO FR_ERRRECORD VALUES(49,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,6,'Jar\u5305\u8fc7\u65e7,\u63d2\u4ef6\u5b89\u88c5\u5931\u8d25:\u62a5\u8868\u81ea\u9002\u5e94\u63d2\u4ef6',NULL,'2017-10-17 19:13:33.566000000')
+INSERT INTO FR_ERRRECORD VALUES(50,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,6,'com.fr.bi.BIPlate','java.lang.ClassNotFoundException: com.fr.bi.BIPlate\u000d\u000a\u0009at java.net.URLClassLoader.findClass(URLClassLoader.java:381)\u000d\u000a\u0009at java.lang.ClassLoader.loadClass(ClassLoader.java:424)\u000d\u000a\u0009at java.lang.ClassLoader.loadClass(ClassLoader.java:357)\u000d\u000a\u0009at java.lang.Class.forName0(Native Method)\u000d\u000a\u0009at java.lang.Class.forName(Class.java:348)\u000d\u000a\u0009at com.fr.general.GeneralUtils.classForName(Unknown Source)\u000d\u000a\u0009at com.fr.fs.PlateFactory.startPlate(Unknown Source)\u000d\u000a\u0009at com.fr.fs.FSModule.startPlate(Unknown Source)\u000d\u000a\u0009at com.fr.fs.FSModule.init(Unknown Source)\u000d\u000a\u0009at com.fr.fs.FSModule.startFinish(Unknown Source)\u000d\u000a\u0009at com.fr.report.module.EngineModule.start(Unknown Source)\u000d\u000a\u0009at com.fr.general.ModuleContext.startModule(Unknown Source)\u000d\u000a\u0009at com.fr.web.BaseServlet.init(Unknown Source)\u000d\u000a\u0009at com.fr.web.ReportServlet.init(Unknown Source)\u000d\u000a\u0009at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1183)\u000d\u000a\u0009at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:795)\u000d\u000a\u0009at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:133)\u000d\u000a\u0009at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)\u000d\u000a\u0009at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)\u000d\u000a\u0009at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)\u000d\u000a\u0009at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)\u000d\u000a\u0009at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)\u000d\u000a\u0009at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)\u000d\u000a\u0009at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)\u000d\u000a\u0009at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)\u000d\u000a\u0009at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)\u000d\u000a\u0009at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1457)\u000d\u000a\u0009at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\u000d\u000a\u0009at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)\u000d\u000a\u0009at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)\u000d\u000a\u0009at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\u000d\u000a\u0009at java.lang.Thread.run(Thread.java:745)\u000d\u000a','2017-10-17 19:13:33.795000000')
+INSERT INTO FR_ERRRECORD VALUES(51,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,4,'\u6587\u4ef6\u8bfb\u53d6\u4e2d[Name : WorkBook5.cpt]  :\u000aError to load:com.fr.plugin.chart.map.server.service.MapEditorOpenEntryService',NULL,'2017-10-17 19:13:45.881000000')
+INSERT INTO FR_ERRRECORD VALUES(52,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,4,'\u6587\u4ef6\u8bfb\u53d6\u4e2d[Name : WorkBook5.cpt]  :\u000aError to load:com.fr.plugin.chart.map.server.service.MapEditorEntryService',NULL,'2017-10-17 19:13:45.883000000')
+INSERT INTO FR_ERRRECORD VALUES(53,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,4,'\u6587\u4ef6\u8bfb\u53d6\u4e2d[Name : WorkBook5.cpt]  :\u000aError to load:com.fr.plugin.chart.map.server.service.MapGetJsonService',NULL,'2017-10-17 19:13:45.887000000')
+INSERT INTO FR_ERRRECORD VALUES(54,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,4,'\u6587\u4ef6\u8bfb\u53d6\u4e2d[Name : WorkBook5.cpt]  :\u000aError to load:com.fr.plugin.chart.phantom.PhantomConfigManager',NULL,'2017-10-17 19:13:45.889000000')
+INSERT INTO FR_ERRRECORD VALUES(55,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,4,'\u6587\u4ef6\u8bfb\u53d6\u4e2d[Name : WorkBook5.cpt]  :\u000aError to load:com.fr.plugin.chart.map.server.MapLayerConfigManager',NULL,'2017-10-17 19:13:45.891000000')
+INSERT INTO FR_ERRRECORD VALUES(56,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,4,'\u6587\u4ef6\u8bfb\u53d6\u4e2d[Name : WorkBook5.cpt]  :\u000aclass not found:com.fr.plugin.chart.funnel.FunnelIndependentVanChart',NULL,'2017-10-17 19:13:45.906000000')
+INSERT INTO FR_ERRRECORD VALUES(57,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,4,'\u6587\u4ef6\u8bfb\u53d6\u4e2d[Name : WorkBook5.cpt]  :\u000aclass not found:com.fr.plugin.chart.heatmap.HeatMapIndependentVanChart',NULL,'2017-10-17 19:13:45.911000000')
+INSERT INTO FR_ERRRECORD VALUES(58,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,4,'\u6587\u4ef6\u8bfb\u53d6\u4e2d[Name : WorkBook5.cpt]  :\u000aclass not found:com.fr.plugin.chart.wordcloud.WordCloudIndependentVanChart',NULL,'2017-10-17 19:13:45.912000000')
+INSERT INTO FR_ERRRECORD VALUES(59,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,4,'\u6587\u4ef6\u8bfb\u53d6\u4e2d[Name : WorkBook5.cpt]  :\u000aclass not found:com.fr.plugin.chart.gantt.GanttIndependentVanChart',NULL,'2017-10-17 19:13:45.920000000')
+INSERT INTO FR_ERRRECORD VALUES(60,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,4,'\u6587\u4ef6\u8bfb\u53d6\u4e2d[Name : WorkBook5.cpt]  :\u000aclass not found:com.fr.plugin.chart.structure.StructureIndependentVanChart',NULL,'2017-10-17 19:13:45.921000000')
+INSERT INTO FR_ERRRECORD VALUES(61,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,4,'\u6587\u4ef6\u8bfb\u53d6\u4e2d[Name : WorkBook5.cpt]  :\u000aJar\u5305\u8fc7\u65e7,\u63d2\u4ef6\u5b89\u88c5\u5931\u8d25:\u56fe\u8868(\u65b0\u7279\u6027)',NULL,'2017-10-17 19:13:45.925000000')
+INSERT INTO FR_ERRRECORD VALUES(62,'\u975e\u6a21\u677f\u89e6\u53d1\u9519\u8bef',NULL,4,'\u6587\u4ef6\u8bfb\u53d6\u4e2d[Name : WorkBook5.cpt]  :\u000aJar\u5305\u8fc7\u65e7,\u63d2\u4ef6\u5b89\u88c5\u5931\u8d25:\u62a5\u8868\u81ea\u9002\u5e94\u63d2\u4ef6',NULL,'2017-10-17 19:13:45.935000000')
+INSERT INTO FR_EXERECORD VALUES(1,'WorkBook5.cpt',0,'__FIT__ : true[java.lang.Boolean], __LOCALE__ : zh_CN[java.util.Locale], __STREAMCLOSED__ : [java.lang.String], CHARACTERENCODINGFILTER.FILTERED : true[java.lang.String], HIDDENHTTPMETHODFILTER.FILTERED : true[java.lang.String], HTTPPUTFORMCONTENTFILTER.FILTERED : true[java.lang.String], ORG.SPRINGFRAMEWORK.WEB.CONTEXT.REQUEST.ASYNC.WEBASYNCMANAGER.WEB_ASYNC_MANAGER : org.springframework.web.context.request.async.WebAsyncManager@28d4d1f9[java.lang.String], REPORTLET : WorkBook5.cpt[java.lang.String], REPORTNAME : WorkBook5.cpt[java.lang.String], REQUESTCONTEXTFILTER.FILTERED : true[java.lang.String]','localhost','\u672a\u767b\u5f55\u7528\u6237','\u672a\u77e5\u89d2\u8272',236,'2017-10-17 19:13:53.628000000',NULL,'{"Agent":"mozilla/5.0 (windows nt 10.0; wow64; trident/7.0; rv:11.0) like gecko","Version":"11.0","BoxModel":true,"Browser":"mozilla"}',200)

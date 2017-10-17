@@ -28,7 +28,7 @@ apply plugin: 'war'
 
 version = '0.1.0'+ "." + new Date().format("yyMMdd")
 sourceCompatibility = 1.8
-webAppDirName = "src/main/webapps"
+webAppDirName = "src/main/webapp"
 
 repositories {
 	mavenCentral()
@@ -40,8 +40,10 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	
+	compile('org.apache.tomcat.embed:tomcat-embed-jasper')
+	
 	//compile('org.springframework.boot:spring-boot-starter-aop')
-	//compile('javax.servlet:javax.servlet-api:3.0.1')
+	//runtime ('javax.servlet:javax.servlet-api:3.0.1')
 
-	compile fileTree(dir:'webapps/WEB-INF/libs',include:"*.jar")
+	compile fileTree(dir:'libs',include:"*.jar")
 }
