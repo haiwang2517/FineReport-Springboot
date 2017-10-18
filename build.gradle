@@ -46,4 +46,8 @@ dependencies {
 	//runtime ('javax.servlet:javax.servlet-api:3.0.1')
 
 	compile fileTree(dir:'libs',include:"*.jar")
+	
+	//compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	//compile('org.springframework.boot:spring-boot-starter-jdbc')
+	
 }

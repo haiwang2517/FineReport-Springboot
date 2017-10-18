@@ -2,8 +2,8 @@
 <DatasourceManager xmlVersion="20151125" releaseVersion="8.0.0">
 <ConnectionMap>
 <Connection name="FRDemo" class="com.fr.data.impl.JDBCDatabaseConnection">
-<DatabaseAttr/>
-<JDBCDatabaseAttr url="jdbc:sqlite://${ENV_HOME}/../FRDemo.db" driver="org.sqlite.JDBC" user="" password="___" encryptPassword="true">
+<DatabaseAttr />
+<JDBCDatabaseAttr url="jdbc:oracle:thin:@192.168.1.110:1521:orcl" driver="oracle.jdbc.driver.OracleDriver" user="czasset" password="___00700034006b007c001700b0005f" encryptPassword="true">
 <DBCPAttr/>
 </JDBCDatabaseAttr>
 </Connection>
@@ -38,13 +38,13 @@
 <ColumnTypes>
 <![CDATA[java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String]]></ColumnTypes>
 <RowData>
-<![CDATA[NKR(5_CuhHceX@Z5R"?c(IR\nnM\Eu%AP_K42>P72$?YOP7\=o#Y($lBHiQI$t"a4ls$u;h8
-Vc8?InjfTBGr49p\4<!9poaND(,K]AUI^o:^N5\8Y-.))Na8@0H6F?4\]Aa(;Q1AO$Y"DI(a;P
-8:/pU;c&6=jURNEfepIK:8K9J*o8br@hu9;0'IZRN/D;Xrgj7:`9u/01plZrGN\"mJ28mkEa
-ree+\R1Xh"8`_=!0r@3CPJA42Jt_(LZcUi%C6(Q&!iu;d$d0Q!1oSQjt>5$6R=)U%DNj]AJd$
-XJS_b)&2*?.j67A#o%:9ZCW-?6gV"qU#01ls:Pl#V$!LtRU,9n3M44a#II`MBsBog'Bhnb;!
-Re!08=@;Z4#/7\2?e;b:McQjn5:q91?"$_Ac1$)f7&?Uh7<2`fnR03LcN:t)_!-dA1;L:kD"
-UrBTF"*OCkeP&V^DR%G7\_YRmjEXW$Fn%k5DN#BO!7qp]AU~
+<![CDATA[NKVO]A_E\fhf@,Lh5R"Wk)aeSHEE>f0'?\h3FoeW^e.=J,-RCB%&WCC)TSZ'70Y@fMV/IO+:'
+V'@\EVd1pRJGMVTg5/J`PP]A7Oej&dotOn:]AZZh9qJr7l&t?g0^d]A02d3^`,n^NGQ/prU0gpn
+mSERt,;O$j;5VHUgXi29e(3.869KoK/Hi&GYd@dT1=L;5n"B@BoN5-coKT[Y(NiEpc3QBFK/
+0:hkfe6'nOaW(TK,SCNRN]A_CL[1"bhDt+D=Z0\!(AS`Q((VsHLGllWM\XuCS'f)BguY!g^u'
+"d]Au'`:OAukOiij#9&rP6=i/?)lBBm--dUR9!o7nHhnAn5A6f3/1HgeJn,0`<=FBZ1t:X_J:
+^=+=!9b=<TF@g5sk)FJCIiA*V]Au$^NL*^LE(%MtJ'>.T0mZ8Gf"(62dSBmH%JR`2f_fA1?KJ
+se+S4dHH7Ut:'g+%"XY+h\Cb.lBsk@?69<KZ8W~
 ]]></RowData>
 </TableData>
 <TableData name="上报用户" class="com.fr.data.impl.EmbeddedTableData">
@@ -58,6 +58,201 @@ UrBTF"*OCkeP&V^DR%G7\_YRmjEXW$Fn%k5DN#BO!7qp]AU~
 <RowData>
 <![CDATA[.k]A)iairdebf`Z?%*?iWWldlV9.pJ^#bc:389nqsVb^nZ6i\W>SsfoI!rr~
 ]]></RowData>
+</TableData>
+<TableData name="单位执行情况-支付明细" class="com.fr.data.impl.DBTableData">
+<Parameters>
+<Parameter>
+<Attributes name="en_code"/>
+<O>
+<![CDATA[110001]]></O>
+</Parameter>
+<Parameter>
+<Attributes name="year"/>
+<O>
+<![CDATA[2016]]></O>
+</Parameter>
+<Parameter>
+<Attributes name="admdiv"/>
+<O>
+<![CDATA[440308]]></O>
+</Parameter>
+</Parameters>
+<Attributes maxMemRowCount="-1"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[FADataBase]]></DatabaseName>
+</Connection>
+<Query>
+<![CDATA[select rownum rn, o.* from (
+select * from ori_pay 
+where
+  en_code = '${en_code}'
+  and year=${year}
+  and admdiv='${admdiv}'
+order by pay_date desc
+) o where rownum <= 10]]></Query>
+</TableData>
+<TableData name="支付按日累计（按单位）" class="com.fr.data.impl.DBTableData">
+<Parameters/>
+<Attributes maxMemRowCount="-1"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[FADataBase]]></DatabaseName>
+</Connection>
+<Query>
+<![CDATA[]]></Query>
+</TableData>
+<TableData name="支付按日累计（全市）" class="com.fr.data.impl.DBTableData">
+<Parameters/>
+<Attributes maxMemRowCount="-1"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[FADataBase]]></DatabaseName>
+</Connection>
+<Query>
+<![CDATA[]]></Query>
+</TableData>
+<TableData name="支付按月累计" class="com.fr.data.impl.DBTableData">
+<Parameters/>
+<Attributes maxMemRowCount="-1"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[FADataBase]]></DatabaseName>
+</Connection>
+<Query>
+<![CDATA[]]></Query>
+</TableData>
+<TableData name="单位执行情况（当前）" class="com.fr.data.impl.DBTableData">
+<Parameters>
+<Parameter>
+<Attributes name="en_code"/>
+<O>
+<![CDATA[001]]></O>
+</Parameter>
+</Parameters>
+<Attributes maxMemRowCount="-1"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[FADataBase]]></DatabaseName>
+</Connection>
+<Query>
+<![CDATA[select * From en_now_bp
+where
+ 1=1
+ and (en_code like '${en_code}%' or en_name like '%${en_code}%')
+order by en_code]]></Query>
+</TableData>
+<TableData name="单位执行情况（每日）" class="com.fr.data.impl.DBTableData">
+<Parameters>
+<Parameter>
+<Attributes name="en"/>
+<O>
+<![CDATA[]]></O>
+</Parameter>
+</Parameters>
+<Attributes maxMemRowCount="-1"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[FADataBase]]></DatabaseName>
+</Connection>
+<Query>
+<![CDATA[select * From en_now_bp
+where
+ 1=1
+ and en_code = '${en}'
+order by en_code]]></Query>
+</TableData>
+<TableData name="单位执行情况（累加）" class="com.fr.data.impl.DBTableData">
+<Parameters>
+<Parameter>
+<Attributes name="en_code"/>
+<O>
+<![CDATA[001]]></O>
+</Parameter>
+</Parameters>
+<Attributes maxMemRowCount="-1"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[FADataBase]]></DatabaseName>
+</Connection>
+<Query>
+<![CDATA[select * From en_datesum_bp
+where
+ 1=1
+ and en_code = '${en_code}' 
+order by en_code, en_date]]></Query>
+</TableData>
+<TableData name="单位情况表" class="com.fr.data.impl.DBTableData">
+<Parameters/>
+<Attributes maxMemRowCount="-1"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[FADataBase]]></DatabaseName>
+</Connection>
+<Query>
+<![CDATA[select * from en_now_bp where en_code='${en_code}']]></Query>
+</TableData>
+<TableData name="基础要素-功能分类" class="com.fr.data.impl.DBTableData">
+<Parameters>
+<Parameter>
+<Attributes name="year"/>
+<O>
+<![CDATA[]]></O>
+</Parameter>
+<Parameter>
+<Attributes name="admdiv"/>
+<O>
+<![CDATA[]]></O>
+</Parameter>
+</Parameters>
+<Attributes maxMemRowCount="-1"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[FADataBase]]></DatabaseName>
+</Connection>
+<Query>
+<![CDATA[select * From ori_bs where year=${year} and admdiv='${admdiv}']]></Query>
+</TableData>
+<TableData name="单位执行情况-支付经济分类树" class="com.fr.data.impl.RecursionTableData">
+<markFields>
+<![CDATA[15]]></markFields>
+<markFieldsName>
+<![CDATA[BSI_CODE]]></markFieldsName>
+<originalTableDataName>
+<![CDATA[单位执行情况-支付明细]]></originalTableDataName>
+</TableData>
+<TableData name="基础要素-经济分类" class="com.fr.data.impl.DBTableData">
+<Parameters>
+<Parameter>
+<Attributes name="year"/>
+<O>
+<![CDATA[2016]]></O>
+</Parameter>
+<Parameter>
+<Attributes name="admdiv"/>
+<O>
+<![CDATA[440308]]></O>
+</Parameter>
+</Parameters>
+<Attributes maxMemRowCount="-1"/>
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName>
+<![CDATA[FADataBase]]></DatabaseName>
+</Connection>
+<Query>
+<![CDATA[select * from ori_bsi where year=${year} and admdiv='${admdiv}']]></Query>
+</TableData>
+<TableData name="基础要素-经济分类树" class="com.fr.data.impl.RecursionTableData">
+<markFields>
+<![CDATA[3]]></markFields>
+<parentmarkFields>
+<![CDATA[7]]></parentmarkFields>
+<markFieldsName>
+<![CDATA[BSI_CODE]]></markFieldsName>
+<parentmarkFieldsName>
+<![CDATA[PARENT_CODE]]></parentmarkFieldsName>
+<originalTableDataName>
+<![CDATA[基础要素-经济分类]]></originalTableDataName>
 </TableData>
 </TableDataMap>
 </DatasourceManager>
