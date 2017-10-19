@@ -20,10 +20,10 @@ import com.fr.web.ReportServlet;
  * @version 0.1.0
  * @since 0.1.0  
  */
-@Configuration
+//@Configuration
 public class ReportServletConfig {
 
-	@Bean
+	//@Bean
 	public ServletRegistrationBean ServletRegistrationBean() {
 		// 报表组件 
 		System.out.println("****************/ReportServer");
