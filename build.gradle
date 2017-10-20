@@ -34,18 +34,32 @@ repositories {
 	mavenCentral()
 }
 
+// 移除 内置的 tomcat 启动方式  , 其他web服务器才可以启动
+// 如果是希望通过 -jar 直接启动的话,就不需要移除这几项引用,负责不能启动
+configurations {
+  compile.exclude module: 'spring-boot-starter-tomcat'
+  compile.exclude group: 'org.apache.tomcat'
+  compile.exclude module: 'tomcat-embed-jasper'
+}
 
 dependencies {
+	
+	
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('org.springframework.boot:spring-boot-starter-jdbc')
+	
 	
 	// 支持weblogic 需要移除冲突包   添加  javax.servlet:javax.servlet-api:3.0.1 依赖包
 	// 1: spring-boot-starter-web 中的 tomcat依赖  exclude group:'org.springframework.boot', module:'spring-boot-starter-tomcat'
 	// 2: org.springframework.boot:spring-boot-starter-tomcat  不要引用
 	// 3: org.apache.tomcat.embed:tomcat-embed-jasper  不要引用
 	
+	compile("org.springframework.boot:spring-boot-starter-web")
+	
 	//////////////////////////////////////////////////  weblogic 需要引用的依赖   ////////////////////////////////////////////////////
-	compile("org.springframework.boot:spring-boot-starter-web"){
-		exclude group:'org.springframework.boot', module:'spring-boot-starter-tomcat'
-	}
+	//compile("org.springframework.boot:spring-boot-starter-web"){
+	//	exclude group:'org.springframework.boot', module:'spring-boot-starter-tomcat'
+	//}
 	//// 手动依赖 javax.servlet:javax.servlet-api:3.0.1
 	compile('javax.servlet:javax.servlet-api:3.0.1')
 	//////////////////////////////////////////////////  weblogic 需要引用的依赖   ////////////////////////////////////////////////////
